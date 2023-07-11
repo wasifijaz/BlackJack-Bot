@@ -70,9 +70,9 @@ def processImage(cropped_img):
 @app.route('/login/<user>/<password>', methods=['GET'])
 def login(user, password):
     keyauthapp = api(
-        name = "BLACKJACK AI",
-        ownerid = "1M0KDtgoMO",
-        secret = "85c75cdd548a9a82b836e518d3b341186e703b08d338018f5a3de405ec677a0f",
+        name = "USERNAME",
+        ownerid = "OWNER_ID",
+        secret = "YOUR_SECRET_KEY",
         version = "1.0",
         hash_to_check = getchecksum()
     )
@@ -91,9 +91,9 @@ def test():
 @app.route('/signup/<user>/<password>/<licensekey>')
 def signup(user, password, licensekey):
     keyauthapp = api(
-        name = "BLACKJACK AI",
-        ownerid = "1M0KDtgoMO",
-        secret = "85c75cdd548a9a82b836e518d3b341186e703b08d338018f5a3de405ec677a0f",
+        name = "USERNAME",
+        ownerid = "OWNER_ID",
+        secret = "YOUR_SECRET_KEY",
         version = "1.0",
         hash_to_check = getchecksum()
     )
