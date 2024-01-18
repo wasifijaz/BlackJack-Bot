@@ -34,7 +34,7 @@ def processImage(cropped_img):
     
   # gray
 #   gray = cv2.cvtColor(cropped_img, cv2.COLOR_BGR2GRAY)
-  gray = cropped_img.copy() #ammar
+  gray = cropped_img.copy()  
 
   # blur
   blur = cv2.GaussianBlur(gray, (0,0), sigmaX=50, sigmaY=50)
@@ -124,24 +124,24 @@ def play():
     # print('I am Here!')
     # Load the image
     img = Image.open("/home/ubuntu/API/Blackjack-Bot-jun-1-23/screenshotImages/image.png")
-    img = cv2.cvtColor(np.array(img), cv2.COLOR_RGB2GRAY) #ammar
+    img = cv2.cvtColor(np.array(img), cv2.COLOR_RGB2GRAY)  
     # print("Image Read!")
     #reszie image
-    # img = img.resize((1920,1080)) #ammar
+    # img = img.resize((1920,1080))  
     # Get the size of the image
-    # width, height = img.size #ammar
+    # width, height = img.size  
     
     dealerCard  = 0
 
-    t_card, b_card_1 , b_card_2 = C_loc.card_loc(img) #ammar
+    t_card, b_card_1 , b_card_2 = C_loc.card_loc(img)  
     # Load an image to read
-    # image = cv2.imread('/home/ubuntu/API/Blackjack-Bot-jun-1-23/screenshotImages/image.png') #ammar
-    # cropped_img = image[int(height*0.19):int(height*0.23), int(width*0.455):int(width*0.475)] #ammar
-    # cropped_img = image[int(height*0.23):int(height*0.27), int(width*0.458):int(width*0.475)] #ammar
-    # cropped_img = image[int(height*0.20):int(height*0.235), int(width*0.456):int(width*0.472)] #ammar
-    # cropped_img = image[int(height*0.125):int(height*0.165), int(width*0.430):int(width*0.455)] #ammar
-    # result = processImage(cropped_img) #ammar
-    result = processImage(t_card) #ammar
+    # image = cv2.imread('/home/ubuntu/API/Blackjack-Bot-jun-1-23/screenshotImages/image.png')  
+    # cropped_img = image[int(height*0.19):int(height*0.23), int(width*0.455):int(width*0.475)]  
+    # cropped_img = image[int(height*0.23):int(height*0.27), int(width*0.458):int(width*0.475)]  
+    # cropped_img = image[int(height*0.20):int(height*0.235), int(width*0.456):int(width*0.472)]  
+    # cropped_img = image[int(height*0.125):int(height*0.165), int(width*0.430):int(width*0.455)]  
+    # result = processImage(cropped_img)  
+    result = processImage(t_card)  
     # print(result)
     if result.isdigit():
         dealerCard = int(result)
@@ -156,12 +156,12 @@ def play():
     
     isAce = 0
 
-    # cropped_img1 = image[int(height*0.46):int(height*0.50), int(width*0.455):int(width*0.473)] #ammar
-    # cropped_img1 = image[int(height*0.48):int(height*0.52), int(width*0.458):int(width*0.475)] #ammar
-    # cropped_img1 = image[int(height*0.465):int(height*0.495), int(width*0.456):int(width*0.472)] #ammar
-    # cropped_img1 = image[int(height*0.440):int(height*0.475), int(width*0.430):int(width*0.455)] #ammar
-    # result1 = processImage(cropped_img1) #ammar
-    result1 = processImage(b_card_1) #ammar
+    # cropped_img1 = image[int(height*0.46):int(height*0.50), int(width*0.455):int(width*0.473)]  
+    # cropped_img1 = image[int(height*0.48):int(height*0.52), int(width*0.458):int(width*0.475)]  
+    # cropped_img1 = image[int(height*0.465):int(height*0.495), int(width*0.456):int(width*0.472)]  
+    # cropped_img1 = image[int(height*0.440):int(height*0.475), int(width*0.430):int(width*0.455)]  
+    # result1 = processImage(cropped_img1)  
+    result1 = processImage(b_card_1)  
     # print(result1)
     if result1.isdigit():
         userCard1 = int(result1)
@@ -172,12 +172,12 @@ def play():
             userCard1 = 'A'
             isAce = 1
 
-    # cropped_img2 = image[int(height*0.46):int(height*0.50), int(width*0.475):int(width*0.495)] #ammar
-    # cropped_img2 = image[int(height*0.48):int(height*0.52), int(width*0.478):int(width*0.495)] #ammar
-    # cropped_img2 = image[int(height*0.465):int(height*0.495), int(width*0.477):int(width*0.494)] #ammar
-    # cropped_img2 = image[int(height*0.440):int(height*0.475), int(width*0.458):int(width*0.480)] #ammar
-    # result2 = processImage(cropped_img2) #ammar
-    result2 = processImage(b_card_2) #ammar
+    # cropped_img2 = image[int(height*0.46):int(height*0.50), int(width*0.475):int(width*0.495)]  
+    # cropped_img2 = image[int(height*0.48):int(height*0.52), int(width*0.478):int(width*0.495)]  
+    # cropped_img2 = image[int(height*0.465):int(height*0.495), int(width*0.477):int(width*0.494)]  
+    # cropped_img2 = image[int(height*0.440):int(height*0.475), int(width*0.458):int(width*0.480)]  
+    # result2 = processImage(cropped_img2)  
+    result2 = processImage(b_card_2)  
     print(f'{result} {result1} {result2}')
     if result2.isdigit():
         userCard2 = int(result2)
