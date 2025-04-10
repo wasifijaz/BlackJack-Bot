@@ -31,7 +31,7 @@ Welcome to the BlackJack Game Bot repository! This project features an intellige
 To use the BlackJack Game Bot, follow these steps:
 
 1. Clone the repository to your local machine.
-   git clone https://github.com/your-username/BlackJack-Game-Bot.git
+   git clone https://github.com/wasifijaz/BlackJack-Game-Bot.git
 2. Install the required dependencies.
    pip install -r requirements.txt
 4. Run the C# desktop application, ensuring that Flask APIs are properly configured and accessible.
