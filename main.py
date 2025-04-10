@@ -38,9 +38,9 @@ def getchecksum():
 
 
 keyauthapp = api(
-    name = "BLACKJACK AI",
-    ownerid = "1M0KDtgoMO",
-    secret = "85c75cdd548a9a82b836e518d3b341186e703b08d338018f5a3de405ec677a0f",
+    name = "PROJECT_NAME",
+    ownerid = "OWNER_ID",
+    secret = "YOUR_SECRET_KEY",
     version = "1.0",
     hash_to_check = getchecksum()
 )
